@@ -1,8 +1,13 @@
 import React from 'react'
 
-const NewsDetails = () => {
+const NewsDetails = ({params}) => {
+    const slug = params.slug;
   return (
-    <div>News Details here</div>
+    <div>
+        <h1>News Details Here</h1>
+        <h4>Slug: {slug}</h4>
+        
+    </div>
   )
 }
 
