@@ -1,11 +1,26 @@
+import { DUMMY_NEWS } from "@/dummy-news";
+import Image from "next/image";
+
 const NewsDetails = ({ params }) => {
   const slug = params.slug;
-  console.log(params);  
+  const newsItem = DUMMY_NEWS.find((newsItem) => newsItem.slug === slug);
+
   return (
-    <div className="text-white">
-      <h1>News Details</h1>
-      <h4>Slug: {slug} </h4>
-    </div>
+    <article className="text-white mt-3">
+      <header>
+        <Image
+          src={`/images/news/${newsItem.image}`}
+          alt={newsItem.title}
+          height={100}
+          width={100}
+          className="w-48 h-44 object-cover"
+          priority
+        />
+        <h1 className="my-2 text-lg font-sans font-medium">{newsItem.title}</h1>
+        <time dateTime={newsItem.date}>{newsItem.date}</time>
+      </header>
+      <p className="text-sm font-mono font-medium">{newsItem.content}</p>
+    </article>
   );
 };
 
