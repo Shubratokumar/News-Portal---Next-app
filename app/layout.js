@@ -13,8 +13,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <MainHeader />
-        {children}
+        <div className="px-10 py-5">
+          <MainHeader />
+          {children}
+        </div>
       </body>
     </html>
   );
