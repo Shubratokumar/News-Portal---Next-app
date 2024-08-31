@@ -1,10 +1,13 @@
 import { DUMMY_NEWS } from "@/dummy-news";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
 const NewsDetails = ({ params }) => {
   const slug = params.slug;
   const newsItem = DUMMY_NEWS.find((newsItem) => newsItem.slug === slug);
-
+  if(!newsItem){
+    notFound();
+  }   
   return (
     <article className="text-white mt-3">
       <header>
