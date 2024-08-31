@@ -12,7 +12,7 @@ const NewsPage = () => {
         {DUMMY_NEWS.map((newsItem) => (
           <li
             key={newsItem.id}
-            className="px-3 py-2 rounded-lg transition-all ease-in-out text-white hover:bg-slate-800 hover:scale-105"
+            className="bg-gradient-to-r hover:from-pink-500/30 hover:to-orange-400/30 px-5 py-4 rounded-lg transition-all ease-in-out duration-300 bg-slate-800/50 text-white hover:scale-105"
           >
             <Link href={`/news/${newsItem.slug}`}>
               <NewsCard news={newsItem} />
