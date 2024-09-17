@@ -12,7 +12,7 @@ const NewsCard = ({ news }) => {
         priority
       />
       <h1 className="my-2 text-lg font-sans font-medium">{news.title}</h1>
-      <p className="text-sm font-light line-clamp-2">{news.content}</p>
+      <p className="text-sm font-light line-clamp-2">{news.content}</p>      
     </div>
   );
 };
