@@ -2,7 +2,6 @@ import React from 'react'
 
 const FilteredNews = ({params}) => {
   const filter = params.filter;
-  console.log(filter);
   
   return (
     <div className="text-white">FilteredNews</div>
